@@ -25,6 +25,9 @@ app.get("/", function (a, b) {
     }
     b.json(storedNotes);
   }),
+  //
+  // ROUTE FOR POST GOES HERE
+  //
   app.delete("/api/notes/:id", function (a, b) {
     try {
       (storedNotes = fs.readFileSync("./db/db.json", "utf8")),
